@@ -20,3 +20,7 @@ jobs:
       with:
         name: dist
         path: dist
+    - name: Using check-wheel-contents to check wheel file
+      run: check-wheel-contents dist/*
+    - name: Publish to PYPI test
+      run: twine upload --repository-url https://test.pypi.org/legacy dist/*
