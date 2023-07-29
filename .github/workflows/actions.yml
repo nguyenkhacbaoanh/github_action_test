@@ -23,4 +23,4 @@ jobs:
     - name: Using check-wheel-contents to check wheel file
       run: check-wheel-contents dist/*
     - name: Publish to PYPI test
-      run: twine upload -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }} --repository-url https://test.pypi.org/legacy/ dist/*
+      run: twine upload -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }} --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*
