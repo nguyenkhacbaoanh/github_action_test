@@ -1,8 +1,7 @@
 name: Python wheels
 on:
-  release:
-    types:
-      - created
+  push:
+    branches: [ $default-branch ]
 jobs:
   wheels:
     runs-on: ubuntu-latest
